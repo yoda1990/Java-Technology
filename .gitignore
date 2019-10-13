@@ -4,4 +4,10 @@
 .project
 /.idea/
 /bin/
-/*.iml
+**/*.iml
+**/target/
+**/.settings/
+**/.classpath
+**/.project
+**/.idea/
+**/bin/
