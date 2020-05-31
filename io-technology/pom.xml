@@ -11,6 +11,8 @@
     <modules>
         <module>netty-in-action</module>
         <module>netty-guide</module>
+        <module>web-socket-demo</module>
+        <module>netty-protocol-demo</module>
     </modules>
 
 
