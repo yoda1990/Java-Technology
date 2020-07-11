@@ -1,13 +1,12 @@
 package org.hmily.io.imframework.websocket;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Component;
 
-import javax.websocket.OnClose;
-import javax.websocket.OnMessage;
-import javax.websocket.OnOpen;
-import javax.websocket.Session;
+import javax.websocket.*;
 import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
@@ -15,9 +14,9 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @ServerEndpoint("/imserver/{userId}")
 @Component
+@Slf4j
 public class WebSocketServer {
 
-    static Log log= LogFactory.get(WebSocketServer.class);
     /**静态变量，用来记录当前在线连接数。应该把它设计成线程安全的。*/
     private static int onlineCount = 0;
     /**concurrent包的线程安全Set，用来存放每个客户端对应的MyWebSocket对象。*/
