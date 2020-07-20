@@ -14,6 +14,7 @@
         <module>web-socket-demo</module>
         <module>netty-protocol-demo</module>
         <module>im-framework</module>
+        <module>keep-alive-gateway</module>
     </modules>
 
     <dependencies>
