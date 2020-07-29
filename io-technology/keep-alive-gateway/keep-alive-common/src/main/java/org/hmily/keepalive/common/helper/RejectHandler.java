@@ -11,11 +11,13 @@ public class RejectHandler implements RejectedExecutionHandler {
     public RejectHandler(String task,int maxBlockQueueSize){
         this.task = task;
         this.maxBlockQueueSize = maxBlockQueueSize;
-    };
+    }
 
     @Override
     public void rejectedExecution(Runnable r, ThreadPoolExecutor executor) {
         throw new RejectedExecutionException("Task:" + task + ",maxBlockQueueSize:" + maxBlockQueueSize
                 + ",Thread:" + r.toString());
     }
+
+
 }
