@@ -1,4 +1,4 @@
-package org.hmily.websocket.client;
+package org.hmily.keepalive.test.websocket.client;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelInitializer;

@@ -72,6 +72,10 @@ public class EchoClient {
             cause.printStackTrace();
             ctx.close();
         }
+
+        protected void messageReceived(ChannelHandlerContext channelHandlerContext, ByteBuffer byteBuffer) throws Exception {
+
+        }
     }
 
 
